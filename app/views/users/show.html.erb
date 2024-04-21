@@ -1,0 +1,62 @@
+<h1>
+    Usuario Seleccionado
+</h1>
+
+<div>
+    <p> ID: <%= @user.id%> </p>
+    <p> Nombre del usuario: <%= @user.nombreUsuario%> </p>
+    <p> Contrasenia: <%= @user.password%> </p>
+</div>
+
+
+<h1>
+    Total gastos rendidos
+</h1>
+
+<% @spents.each do |spent| %>
+        <div>
+            <p> Monto: <%= spent.monto %> </p>
+            <p> Descripcion: <%= spent.descripcion %> </p>
+            <p> Imagen: <%= spent.boleta_img %> </p>
+            <p> Estado del gasto: <%= spent.estado %> </p>
+            <p><%= link_to "Ver gasto", spent %></p>
+        </div>
+<% end %>
+
+<h1>
+    Total gastos aprobados
+</h1>
+
+<% @spents.each do |spent| %>
+    <% if spent.estado == "Aprobado" %>
+        <div>
+            <p> Monto: <%= spent.monto %> </p>
+            <p> Descripcion: <%= spent.descripcion %> </p>
+            <p> Imagen: <%= spent.boleta_img %> </p>
+            <p> Estado del gasto: <%= spent.estado %> </p>
+            <p><%= link_to "Ver gasto", spent %></p>
+        </div>
+    <% end %>
+<% end %>
+
+<h1>
+    Total gastos rechazados
+</h1>
+
+<% @spents.each do |spent| %>
+    <% if spent.estado == "Rechazado" %>
+        <div>
+            <p> Monto: <%= spent.monto %> </p>
+            <p> Descripcion: <%= spent.descripcion %> </p>
+            <p> Imagen: <%= spent.boleta_img %> </p>
+            <p> Estado del gasto: <%= spent.estado %> </p>
+            <p><%= link_to "Ver gasto", spent %></p>
+        </div>
+    <% end %>
+<% end %>
+
+
+
+<a href="/">
+    <button type="button"> Volver al inicio </button>
+</a>

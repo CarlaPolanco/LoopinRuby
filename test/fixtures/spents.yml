@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  monto: 1
+  descripcion: MyText
+  boleta_img: MyText
+  estado: MyText
+  id_user: MyText
+
+two:
+  monto: 1
+  descripcion: MyText
+  boleta_img: MyText
+  estado: MyText
+  id_user: MyText

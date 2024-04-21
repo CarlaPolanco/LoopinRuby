@@ -1,0 +1,17 @@
+<h1>
+    Gastos Existentes
+</h1>
+
+<% @spents.each do |spent| %>
+    <div>
+        <p> Monto: <%= spent.monto%> </p>
+        <p> Descripcion: <%= spent.descripcion %> </p>
+        <p> Imagen: <%= spent.boleta_img%> </p>
+        <p> Estado del gasto: <%= spent.estado %> </p>
+        <p><%= link_to "Ver gasto", spent%></p>
+    </div>
+<% end %>
+
+<a href="/spents/new">
+    <button type="button"> Ingresar nuevo gasto </button>
+</a>

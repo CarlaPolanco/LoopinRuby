@@ -1,0 +1,38 @@
+<h1> Editar Gasto </h1>
+
+    <form action="/spents/<%= @id %>" method="post">
+
+        <input type="hidden" name="_method" value="PATCH">
+
+        <div>
+
+            <label for="monto">Monto:</label>
+            <input type="number" name="spents[monto]" id="monto">
+
+            <label for="descripcion">Descripcion:</label>
+            <input type="text" name="spents[descripcion]" id="descripcion">
+
+            <label for="boleta_img">boleta_img:</label>
+            <input type="text" name="spents[boleta_img]" id="boleta_img">
+
+            <label for="user_id">User_id:</label>
+            <input type="number" name="spents[id_user]" id="user_id">
+            
+            <label for="dwarfs">Selecciona el estado:</label>
+            <select multiple name="spents[estado]" id="drawfs" >
+                <option>Pendiente</option>
+                <option>Aprobado</option>
+                <option>Rechazado</option>
+            </select>  
+
+        </div>
+
+        <p> <input type="submit" value="Aceptar"> </p>  	
+        
+    </form>
+
+<p>
+    <a href="/">
+        <button type="button">Volver al inicio</button>
+    </a>
+</p>

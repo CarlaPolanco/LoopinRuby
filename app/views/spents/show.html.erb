@@ -1,0 +1,27 @@
+<h1>
+    Gasto Seleccionado
+</h1>
+
+    <div>
+        <p> <%= @spent.monto%> </p>
+        <p> <%= @spent.descripcion %> </p>
+        <p> <%= @spent.boleta_img%> </p>
+        <p> <%= @spent.estado %> </p>
+
+        <div>
+            <%= link_to "Editar", "/spents/#{@spent.id}/edit"%>
+            <%= link_to "Eliminar", spent_path(@spent), method: :delete%>
+        </div>
+
+    </div>
+
+
+<p></p>
+<a href="/spents/new">
+    <button type="button"> Ingresar nuevo gasto </button>
+</a>
+
+<a href="/">
+    <button type="button"> Volver al inicio </button>
+</a>
+

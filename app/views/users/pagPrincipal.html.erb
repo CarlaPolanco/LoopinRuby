@@ -1,0 +1,22 @@
+<h1>
+    Bienvenidos!! Pagina Principal
+</h1>
+
+<% @users.each do |user| %>
+    <div>
+        <p> ID: <%= user.id%> </p>
+        <p> Nombre del usuario: <%= user.nombreUsuario%> </p>
+        <p> Contrasenia: <%= user.password%> </p>
+
+        <p><%= link_to "Ver usuario", user%></p>
+    </div>
+<% end %>
+
+<a href="/users/new">
+    <button type="button"> Ingresar nuevo usuario </button>
+</a>
+
+<a href="/spents">
+    <button type="button"> Gastos</button>
+</a>
+
